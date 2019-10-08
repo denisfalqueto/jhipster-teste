@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git config --global user.email "denisfalqueto@gmail.com"
+git config --global user.nome "Denis Falqueto"
 apt install zip
 curl -s "https://get.sdkman.io" | bash
 . /root/.sdkman/bin/sdkman-init.sh
