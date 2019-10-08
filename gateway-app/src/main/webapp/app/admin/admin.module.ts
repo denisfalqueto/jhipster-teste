@@ -12,7 +12,6 @@ import { JhiHealthCheckComponent } from './health/health.component';
 import { JhiConfigurationComponent } from './configuration/configuration.component';
 import { JhiDocsComponent } from './docs/docs.component';
 import { JhiGatewayComponent } from './gateway/gateway.component';
-import { JhiTrackerComponent } from './tracker/tracker.component';
 
 @NgModule({
   imports: [
@@ -28,7 +27,6 @@ import { JhiTrackerComponent } from './tracker/tracker.component';
     JhiHealthModalComponent,
     JhiDocsComponent,
     JhiGatewayComponent,
-    JhiTrackerComponent,
     JhiMetricsMonitoringComponent
   ],
   entryComponents: [JhiHealthModalComponent]

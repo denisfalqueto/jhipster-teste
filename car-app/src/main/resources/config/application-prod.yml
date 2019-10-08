@@ -38,17 +38,6 @@ spring:
       enabled: false
     livereload:
       enabled: false
-  kafka:
-    consumer:
-      bootstrap-servers: localhost:9092
-      group-id: group_id
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    producer:
-      bootstrap-servers: localhost:9092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/carsapp?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -76,13 +65,6 @@ spring:
       hibernate.cache.hazelcast.instance_name: carsapp
       hibernate.cache.use_minimal_puts: true
       hibernate.cache.hazelcast.use_lite_member: true
-  data:
-    jest:
-      uri: http://localhost:9200
-  # see https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html#boot-features-connecting-to-elasticsearch-jest
-  elasticsearch:
-    rest:
-      uris: http://localhost:9200
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: prod
@@ -155,7 +137,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: ZjQxNTE2Yjc3MDQxOTc2MDgxYWMzYTEzNWZkODYzMTUwMTNiYTRkNmFiNzlmMzViNDM2MzFkMzJlMWQxY2NhYjYzMmRiYzY5MGFmODViYmFhOGIwNjRiMjQzNzgwYTA4Y2M2NjI1MWI3NmY3MWYxYmE3NmIyNzk3MjY5MDgyNWE=
+        base64-secret: ZGRkYWUxMWU0ODIxNzQxNzE0OTZhMmQ5MTg3YmYxMzhjZjBiYTdmYTRjM2FjOGY0MDhiYmQ4OGRhYTNhMmFlYWIwZTRiYTZjNWRkNjUyMmNkOTJjYTViNGEwOWUzNGUzYTZkNzgyYTJmMGNmYWEzM2Y2NjJjNmNmOGZmZTg5Zjg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

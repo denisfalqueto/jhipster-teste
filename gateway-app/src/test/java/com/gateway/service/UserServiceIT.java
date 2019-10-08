@@ -3,7 +3,6 @@ package com.gateway.service;
 import com.gateway.GatewayApp;
 import com.gateway.config.Constants;
 import com.gateway.domain.User;
-import com.gateway.repository.search.UserSearchRepository;
 import com.gateway.repository.UserRepository;
 import com.gateway.service.dto.UserDTO;
 import com.gateway.service.util.RandomUtil;
@@ -18,7 +17,6 @@ import org.springframework.data.auditing.AuditingHandler;
 import org.springframework.data.auditing.DateTimeProvider;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
@@ -28,15 +26,11 @@ import java.util.Optional;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
  * Integration tests for {@link UserService}.
  */
-@EmbeddedKafka
 @SpringBootTest(classes = GatewayApp.class)
 @Transactional
 public class UserServiceIT {
@@ -58,14 +52,6 @@ public class UserServiceIT {
 
     @Autowired
     private UserService userService;
-
-    /**
-     * This repository is mocked in the com.gateway.repository.search test package.
-     *
-     * @see com.gateway.repository.search.UserSearchRepositoryMockConfiguration
-     */
-    @Autowired
-    private UserSearchRepository mockUserSearchRepository;
 
     @Autowired
     private AuditingHandler auditingHandler;
@@ -180,9 +166,6 @@ public class UserServiceIT {
         userService.removeNotActivatedUsers();
         users = userRepository.findAllByActivatedIsFalseAndActivationKeyIsNotNullAndCreatedDateBefore(now.minus(3, ChronoUnit.DAYS));
         assertThat(users).isEmpty();
-
-        // Verify Elasticsearch mock
-        verify(mockUserSearchRepository, times(1)).delete(user);
     }
 
     @Test
@@ -199,9 +182,6 @@ public class UserServiceIT {
         userService.removeNotActivatedUsers();
         Optional<User> maybeDbUser = userRepository.findById(dbUser.getId());
         assertThat(maybeDbUser).contains(dbUser);
-
-        // Verify Elasticsearch mock
-        verify(mockUserSearchRepository, never()).delete(user);
     }
 
     @Test

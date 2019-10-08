@@ -49,13 +49,6 @@ spring:
       hibernate.generate_statistics: false
       hibernate.hbm2ddl.auto: validate
       hibernate.jdbc.time_zone: UTC
-  data:
-    elasticsearch:
-      properties:
-        path:
-          home: target/elasticsearch
-  kafka:
-    bootstrap-servers: ${spring.embedded.kafka.brokers}
   liquibase:
     contexts: test
   mail:
@@ -106,7 +99,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ZjQxNTE2Yjc3MDQxOTc2MDgxYWMzYTEzNWZkODYzMTUwMTNiYTRkNmFiNzlmMzViNDM2MzFkMzJlMWQxY2NhYjYzMmRiYzY5MGFmODViYmFhOGIwNjRiMjQzNzgwYTA4Y2M2NjI1MWI3NmY3MWYxYmE3NmIyNzk3MjY5MDgyNWE=
+        base64-secret: ZGRkYWUxMWU0ODIxNzQxNzE0OTZhMmQ5MTg3YmYxMzhjZjBiYTdmYTRjM2FjOGY0MDhiYmQ4OGRhYTNhMmFlYWIwZTRiYTZjNWRkNjUyMmNkOTJjYTViNGEwOWUzNGUzYTZkNzgyYTJmMGNmYWEzM2Y2NjJjNmNmOGZmZTg5Zjg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

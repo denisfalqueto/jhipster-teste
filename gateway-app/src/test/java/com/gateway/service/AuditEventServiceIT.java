@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.kafka.test.context.EmbeddedKafka;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
@@ -18,7 +17,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for {@link AuditEventService}.
  */
-@EmbeddedKafka
 @SpringBootTest(classes = GatewayApp.class)
 @Transactional
 public class AuditEventServiceIT {

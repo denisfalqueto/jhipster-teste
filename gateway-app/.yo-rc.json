@@ -1,8 +1,7 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.gateway",
-      "microservicePath": "../car-app"
+      "packageName": "com.gateway"
     },
     "jhipsterVersion": "6.3.1",
     "applicationType": "gateway",
@@ -13,16 +12,16 @@
     "authenticationType": "jwt",
     "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
-    "websocket": "spring-websocket",
+    "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
-    "searchEngine": "elasticsearch",
-    "messageBroker": "kafka",
+    "searchEngine": false,
+    "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
-    "enableSwaggerCodegen": true,
-    "jwtSecretKey": "YTU1OWQ1MWJhMjg5YzNmMmQyZTU1ZDFlOWU0NTU5ZDdkMjMzNDlmOTkzNDMxYzQ5ZjdmNWRiYjc5YThhN2I3MWViNzBjNWE2ZjVjMGUxYTNjOTFhZjg3NzUyYWNiYmEzYjFjY2M2YjI5ZWNkYzhhYmIyYWMzY2QzYzhjODMzNjY=",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OGRkNDcyMDU4MWM5YWIyODVmOTIxMmVkMTI2MWZjODRjNjIxZjViNGUzY2MwMWZjMDUwZmViN2M5Y2E3YWU2Y2M5YmUzN2QzNjNiYzAxYjRiYjRjYzYxMGVmZDUzZTc0M2Y3MjEyMTFmNGM2ZTBlNjk5MDg3NjYzNTk4ZGQwOTk=",
     "embeddableLaunchScript": false,
     "useSass": true,
     "clientPackageManager": "npm",

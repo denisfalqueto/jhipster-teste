@@ -7,11 +7,10 @@ import { healthRoute } from './health/health.route';
 import { logsRoute } from './logs/logs.route';
 import { metricsRoute } from './metrics/metrics.route';
 import { gatewayRoute } from './gateway/gateway.route';
-import { trackerRoute } from './tracker/tracker.route';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
 
-const ADMIN_ROUTES = [auditsRoute, configurationRoute, docsRoute, healthRoute, logsRoute, gatewayRoute, trackerRoute, metricsRoute];
+const ADMIN_ROUTES = [auditsRoute, configurationRoute, docsRoute, healthRoute, logsRoute, gatewayRoute, metricsRoute];
 
 export const adminState: Routes = [
   {
