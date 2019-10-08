@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gateway"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "com.gateway",
+    "packageFolder": "com/gateway",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YTU1OWQ1MWJhMjg5YzNmMmQyZTU1ZDFlOWU0NTU5ZDdkMjMzNDlmOTkzNDMxYzQ5ZjdmNWRiYjc5YThhN2I3MWViNzBjNWE2ZjVjMGUxYTNjOTFhZjg3NzUyYWNiYmEzYjFjY2M2YjI5ZWNkYzhhYmIyYWMzY2QzYzhjODMzNjY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
